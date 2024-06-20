@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  --header-bg: #10375c;
+}
 html {
   font-size: 62.5%;
 }
@@ -10,3 +12,76 @@ body {
   font-size: 1.6rem;
   font-family: "Sora", sans-serif;
 }
+/* ================================================== common */
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  border-radius: 999px;
+  background: #2e80ce;
+  color: #fff;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+/* ================================================== header */
+.header {
+  background: var(--header-bg);
+  min-height: 100vh;
+}
+/* ================================================== header top */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  align-items: center;
+}
+.nav-bar__list {
+  display: flex;
+}
+.nav-bar__item {
+  padding: 8px 21px;
+}
+.header__action--login,
+.nav-bar__link {
+  color: #c9d2da;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75; /* 175% */
+}
+.header__action--login:hover,
+.nav-bar__link:hover,
+.nav-bar__link--action {
+  text-shadow: 1px 0 0 currentColor;
+  color: #fff;
+}
+.nav-bar__link--action::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  right: 8px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.header__action {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.header__action--signup {
+  padding: 8px 20px;
+  line-height: 1.75;
+}
+/* ================================================== header bottom */
+
+
