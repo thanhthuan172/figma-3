@@ -227,3 +227,64 @@ h3 {
 .service__btn {
   margin-top: 55px;
 }
+
+/* ================================================== work */
+.work {
+  margin-top: 170px;
+  padding: 100px 0;
+  background: #f6fbff;
+}
+.work__heading {
+  text-align: left;
+}
+.work__desc {
+  margin-top: 18px;
+  width: 468px;
+}
+.work__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 86px;
+}
+.work__item {
+  width: 370px;
+  height: 402px;
+  padding: 42px;
+  border: 16px solid #eaf6ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: #fff;
+}
+.work__item:hover {
+  border: 16px solid #2e80ce;
+  transform: translateY(-16px);
+}
+.work__icon {
+  width: 72px;
+  height: 72px;
+}
+.work__item--heading {
+  color: #10375c;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.38;
+  margin-top: 18px;
+}
+.work__item--desc {
+  color: #575f66;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+  margin-top: 28px;
+}
+.work__link {
+  display: inline-block;
+  color: #575f66;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+  margin-top: 18px;
+}
+.work__item:hover .work__link {
+  color: #2e80ce;
+}
