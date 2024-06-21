@@ -288,3 +288,43 @@ h3 {
 .work__item:hover .work__link {
   color: #2e80ce;
 }
+
+/* ================================================== About */
+.about__item {
+  margin-top: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__media {
+  width: 49%;
+  height: 491px;
+  position: relative;
+}
+.about__content {
+  padding: 83px 0;
+  width: 40%;
+}
+.about__img {
+  height: 370px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.about__img--big {
+  width: 512px;
+}
+.about__img--small {
+  width: 332px;
+  position: absolute;
+  top: 121px;
+  left: 238px;
+}
+.about__content--heading {
+  text-align: left;
+}
+.about__content--desc {
+  margin-top: 18px;
+}
+.about__link {
+  margin-top: 38px;
+}
