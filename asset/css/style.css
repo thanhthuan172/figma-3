@@ -83,6 +83,12 @@ h3 {
 .control__icon--next {
   rotate: 180deg;
 }
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
 /* ================================================== header */
 .header {
   background: var(--header-bg);
@@ -564,3 +570,113 @@ h3 {
 }
 
 /* ================================================== footer */
+.footer {
+  margin-top: 170px;
+  background: #10375c;
+  font-family: "Open Sans", "sans-serif";
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 78px;
+  padding-top: 100px;
+}
+.footer__desc {
+  color: #a9b3bb;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+  max-width: 336px;
+  margin-top: 21px;
+}
+.footer__heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+.footer__link {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+.footer__desc--sub {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  max-width: 273px;
+  margin-top: 20px;
+}
+.footer__social {
+  display: flex;
+  margin: 20px 0 28px;
+  gap: 10px;
+}
+.footer__social--btn {
+  color: #2e80ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: #fff;
+  transition: 0.5s;
+}
+.footer__social--btn:hover {
+  color: #fff;
+  background: #2e80ce;
+}
+.footer__form {
+  display: flex;
+  margin-top: 10px;
+  gap: 12px;
+}
+.footer__input {
+  width: 212px;
+  height: 46px;
+  padding: 10px;
+  color: #9ca8b1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  background: transparent;
+  outline: none;
+}
+.footer__sub--btn {
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+
+.footer__bottom--desc::before {
+  content: "";
+  display: block;
+  background: #406181;
+  width: 1170px;
+  height: 1px;
+  margin-bottom: 28px;
+}
+.footer__bottom--desc {
+  color: #aab3ba;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  padding-bottom: 42px;
+}
