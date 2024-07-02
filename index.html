@@ -91,6 +91,8 @@
     <link rel="stylesheet" href="./asset/css/reset.css" />
     <!-- style -->
     <link rel="stylesheet" href="./asset/css/style.css" />
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Shine smile</title>
   </head>
   <body>
@@ -147,11 +149,13 @@
                 src="./asset/img/dental.jpg"
                 alt="dental"
                 class="hero__img hero__img--large"
+                data-aos="zoom-in-up"
               />
               <img
                 src="./asset/img/dental-2.jpg"
                 alt="dental-2"
                 class="hero__img hero__img--small"
+                data-aos="zoom-in-up"
               />
             </figure>
           </div>
@@ -175,6 +179,7 @@
                 src="./asset/img/dental.jpg"
                 alt="Our services"
                 class="service_img"
+                data-aos="zoom-in-up"
               />
             </figure>
             <!-- service right -->
@@ -357,7 +362,7 @@
         <div class="container">
           <div class="about__item">
             <!-- left -->
-            <div class="about__media">
+            <div class="about__media" data-aos="fade-right">
               <figure class="image">
                 <img
                   src="./asset/img/dental.jpg"
@@ -372,7 +377,7 @@
               </figure>
             </div>
             <!-- right -->
-            <section class="about__content">
+            <section class="about__content" data-aos="fade-left">
               <h2 class="about__content--heading">
                 Take back your smile with shine.
               </h2>
@@ -768,5 +773,11 @@
         </div>
       </section>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: "3000",
+      });
+    </script>
   </body>
 </html>
