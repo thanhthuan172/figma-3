@@ -101,10 +101,9 @@
     <title>Shine smile</title>
   </head>
   <body>
-    <!-- header -->
-    <header class="header">
+    <!-- header top -->
+    <header class="header-fixed">
       <div class="container">
-        <!-- header top -->
         <div class="header-top">
           <!-- logo -->
           <a href="./"
@@ -136,6 +135,70 @@
             <a href="" class="btn header__action--signup">Sign Up</a>
           </div>
         </div>
+      </div>
+      <!-- header tablet/mobile -->
+      <div class="mobile-header">
+        <!-- mobile menu -->
+        <input
+          type="checkbox"
+          name="menu-checkbox"
+          id="menu-checkbox"
+          class="menu-checkbox"
+          hidden
+        />
+        <label for="menu-checkbox">
+          <svg
+            class="menu-header__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            fill="currentColor"
+          >
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </label>
+        <!-- overlay -->
+        <label class="overlay" for="menu-checkbox"></label>
+        <!-- menu drawer -->
+        <div class="menu-drawer">
+          <!-- menu top -->
+          <div class="menu-top">
+            <a href="./"
+              ><img src="./asset/img/logo.svg" alt="Shine smile" class="logo"
+            /></a>
+            <label for="menu-checkbox">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="menu_close"
+              >
+                <path
+                  fill="currentColor"
+                  d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                />
+              </svg>
+            </label>
+          </div>
+          <!-- nav mobile -->
+          <ul class="nav-mobile" id="navbar-mobile"></ul>
+          <script>
+            const navDesktop = document.querySelector("#navbar-desktop");
+            const navMobile = document.querySelector("#navbar-mobile");
+            navMobile.innerHTML = navDesktop.innerHTML;
+          </script>
+          <div class="separate"></div>
+          <li class="nav-bar__item nav-bar__item--hidden">
+            <a href="" class="nav-bar__link">Log In</a>
+          </li>
+          <li class="nav-bar__item nav-bar__item--hidden">
+            <a href="" class="nav-bar__link">Sign Up</a>
+          </li>
+        </div>
+      </div>
+    </header>
+    <header class="header">
+      <div class="container">
         <!-- header bottom - hero -->
         <section class="hero">
           <!-- left -->
@@ -168,60 +231,6 @@
         </section>
       </div>
     </header>
-    <!-- header tablet/mobile -->
-    <div class="mobile-header">
-      <!-- mobile menu -->
-      <input
-        type="checkbox"
-        name="menu-checkbox"
-        id="menu-checkbox"
-        class="menu-checkbox"
-        hidden
-      />
-      <label for="menu-checkbox">
-        <svg
-          class="menu-header__icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-          fill="currentColor"
-        >
-          <path
-            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-          />
-        </svg>
-      </label>
-      <!-- overlay -->
-      <label class="overlay" for="menu-checkbox"></label>
-      <!-- menu drawer -->
-      <div class="menu-drawer">
-        <!-- menu top -->
-        <div class="menu-top">
-          <a href="./"
-            ><img src="./asset/img/logo.svg" alt="Shine smile" class="logo"
-          /></a>
-          <label for="menu-checkbox">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              class="menu_close"
-            >
-              <path
-                fill="currentColor"
-                d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
-              />
-            </svg>
-          </label>
-        </div>
-        <!-- nav mobile -->
-        <ul class="nav-mobile" id="navbar-mobile"></ul>
-        <script>
-          const navDesktop = document.querySelector("#navbar-desktop");
-          const navMobile = document.querySelector("#navbar-mobile");
-          navMobile.innerHTML = navDesktop.innerHTML;
-        </script>
-      </div>
-    </div>
-
     <!-- main -->
     <main>
       <!-- Service -->
@@ -712,7 +721,7 @@
           <!-- top -->
           <div class="footer__top">
             <!-- column 1 -->
-            <div class="footer__column">
+            <div class="footer__column footer-hidden-tablet">
               <a href="./"
                 ><img src="./asset/img/logo.svg" alt="Shine smile" class="logo"
               /></a>
