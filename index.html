@@ -91,7 +91,12 @@
     <link rel="stylesheet" href="./asset/css/reset.css" />
     <!-- style -->
     <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/responsive.css" />
     <!-- AOS Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Shine smile</title>
   </head>
@@ -103,11 +108,14 @@
         <div class="header-top">
           <!-- logo -->
           <a href="./"
-            ><img src="./asset/img/logo.svg" alt="Shine smile" class="logo"
+            ><img
+              src="./asset/img/logo.svg"
+              alt="Shine smile"
+              class="logo header__logo"
           /></a>
           <!-- nav -->
           <nav class="nav-bar">
-            <ul class="nav-bar__list">
+            <ul class="nav-bar__list" id="navbar-desktop">
               <li class="nav-bar__item">
                 <a href="" class="nav-bar__link nav-bar__link--action">Home</a>
               </li>
@@ -149,19 +157,71 @@
                 src="./asset/img/dental.jpg"
                 alt="dental"
                 class="hero__img hero__img--large"
-                data-aos="zoom-in-up"
               />
               <img
                 src="./asset/img/dental-2.jpg"
                 alt="dental-2"
                 class="hero__img hero__img--small"
-                data-aos="zoom-in-up"
               />
             </figure>
           </div>
         </section>
       </div>
     </header>
+    <!-- header tablet/mobile -->
+    <div class="mobile-header">
+      <!-- mobile menu -->
+      <input
+        type="checkbox"
+        name="menu-checkbox"
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+      <label for="menu-checkbox">
+        <svg
+          class="menu-header__icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          fill="currentColor"
+        >
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </label>
+      <!-- overlay -->
+      <label class="overlay" for="menu-checkbox"></label>
+      <!-- menu drawer -->
+      <div class="menu-drawer">
+        <!-- menu top -->
+        <div class="menu-top">
+          <a href="./"
+            ><img src="./asset/img/logo.svg" alt="Shine smile" class="logo"
+          /></a>
+          <label for="menu-checkbox">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="menu_close"
+            >
+              <path
+                fill="currentColor"
+                d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+              />
+            </svg>
+          </label>
+        </div>
+        <!-- nav mobile -->
+        <ul class="nav-mobile" id="navbar-mobile"></ul>
+        <script>
+          const navDesktop = document.querySelector("#navbar-desktop");
+          const navMobile = document.querySelector("#navbar-mobile");
+          navMobile.innerHTML = navDesktop.innerHTML;
+        </script>
+      </div>
+    </div>
+
     <!-- main -->
     <main>
       <!-- Service -->
@@ -179,7 +239,6 @@
                 src="./asset/img/dental.jpg"
                 alt="Our services"
                 class="service_img"
-                data-aos="zoom-in-up"
               />
             </figure>
             <!-- service right -->
@@ -264,7 +323,9 @@
       <!-- Work -->
       <section class="work">
         <div class="container">
-          <h2 class="work__heading">How it works</h2>
+          <h2 class="work__heading" data-aos="animate__flipInX">
+            How it works
+          </h2>
           <p class="desc work__desc">
             Exceptional dental care for all ages. Your great smile begins with a
             great dentist.
@@ -362,7 +423,7 @@
         <div class="container">
           <div class="about__item">
             <!-- left -->
-            <div class="about__media" data-aos="fade-right">
+            <div class="about__media">
               <figure class="image">
                 <img
                   src="./asset/img/dental.jpg"
@@ -377,7 +438,7 @@
               </figure>
             </div>
             <!-- right -->
-            <section class="about__content" data-aos="fade-left">
+            <section class="about__content">
               <h2 class="about__content--heading">
                 Take back your smile with shine.
               </h2>
@@ -776,7 +837,9 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: "3000",
+        useClassNames: true,
+        initClassName: false,
+        animatedClassName: "animate__animated",
       });
     </script>
   </body>
